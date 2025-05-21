@@ -1,15 +1,30 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const circularFont = localFont({
+  src: "../public/fonts/circularweb-book.woff2",
+  variable: "--font-circular",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const generalFont = localFont({
+  src: "../public/fonts/general.woff2",
+  variable: "--font-general",
+});
+
+const robertRegular = localFont({
+  src: "../public/fonts/robert-regular.woff2",
+  variable: "--font-robert-regular",
+});
+
+const robertMedium = localFont({
+  src: "../public/fonts/robert-medium.woff2",
+  variable: "--font-robert-medium",
+});
+
+const zentryFont = localFont({
+  src: "../public/fonts/zentry-regular.woff2",
+  variable: "--font-zentry",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${circularFont.variable} ${generalFont.variable} ${robertRegular.variable} ${robertMedium.variable} ${zentryFont.variable} antialiased`}
       >
         {children}
       </body>

@@ -8,9 +8,38 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-robert-regular: var(--font-robert-regular);
+  --font-general: var(--font-general);
+  --font-circularWeb: var(--font-circular);
+  --font-robert-medium: var(--font-robert-medium);
+  --font-zentry: var(--font-zentry);
 }
+
+@theme{
+  --color-blue-50: #ebf3fe;
+  --color-blue-100: #d8e6fd;
+  --color-blue-200: #b1cefb;
+  --color-blue-300: #8ab5fa;
+  --color-blue-400: #639cf8;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #0b60ea;
+  --color-blue-700: #0848b0;
+  --color-blue-800: #053075;
+  --color-blue-900: #03183b;
+  --color-blue-950: #010c1d;
+  --color-orange-50: #fff5f0;
+  --color-orange-100: #ffebe0;
+  --color-orange-200: #ffd7c2;
+  --color-orange-300: #ffc09e;
+  --color-orange-400: #ffa270;
+  --color-orange-500: #ff762c;
+  --color-orange-600: #ff5900;
+  --color-orange-700: #e04f00;
+  --color-orange-800: #b84000;
+  --color-orange-900: #852e00;
+  --color-orange-950: #571e00;
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -22,5 +51,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-general), var(--font-circularWeb), var(--font-robert-regular), var(--font-zentry), Arial, Helvetica, sans-serif;
+}
+
+.mask-clip-path {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Note: This default polygon clips nothing. */
+}
+
+.absolute-center {
+  @apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%];
 }
