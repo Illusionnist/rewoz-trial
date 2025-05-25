@@ -61,3 +61,19 @@ body {
 .absolute-center {
   @apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%];
 }
+
+.special-font b {
+  font-family: var( --font-zentry);/* Uses 'zentry' font from config */
+  font-feature-settings: "ss01" on;
+}
+
+.hero-heading {
+  /* Apply font-zentry in HTML or uncomment below if this class always sets it */
+  font-family: var( --font-zentry);
+  @apply uppercase font-black text-5xl sm:text-7xl md:text-9xl lg:text-[12rem];
+}
+
+ .flex-center {
+  @apply flex items-center justify-center;
+}
+
