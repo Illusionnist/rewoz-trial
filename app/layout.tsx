@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const circularFont = localFont({
   src: "../public/fonts/circularweb-book.woff2",
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${circularFont.variable} ${generalFont.variable} ${robertRegular.variable} ${robertMedium.variable} ${zentryFont.variable} antialiased`}
       >
+      <Navbar/>
         {children}
       </body>
     </html>

@@ -1,79 +1,207 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-robert-regular: var(--font-robert-regular);
-  --font-general: var(--font-general);
-  --font-circularWeb: var(--font-circular);
-  --font-robert-medium: var(--font-robert-medium);
-  --font-zentry: var(--font-zentry);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-robert-regular: var(--font-robert-regular);
+    --font-general: var(--font-general);
+    --font-circularWeb: var(--font-circular);
+    --font-robert-medium: var(--font-robert-medium);
+    --font-zentry: var(--font-zentry);
 }
 
 @theme{
-  --color-blue-50: #ebf3fe;
-  --color-blue-100: #d8e6fd;
-  --color-blue-200: #b1cefb;
-  --color-blue-300: #8ab5fa;
-  --color-blue-400: #639cf8;
-  --color-blue-500: #3b82f6;
-  --color-blue-600: #0b60ea;
-  --color-blue-700: #0848b0;
-  --color-blue-800: #053075;
-  --color-blue-900: #03183b;
-  --color-blue-950: #010c1d;
-  --color-orange-50: #fff5f0;
-  --color-orange-100: #ffebe0;
-  --color-orange-200: #ffd7c2;
-  --color-orange-300: #ffc09e;
-  --color-orange-400: #ffa270;
-  --color-orange-500: #ff762c;
-  --color-orange-600: #ff5900;
-  --color-orange-700: #e04f00;
-  --color-orange-800: #b84000;
-  --color-orange-900: #852e00;
-  --color-orange-950: #571e00;
+    --color-blue-50: #ebf3fe;
+    --color-blue-100: #d8e6fd;
+    --color-blue-200: #b1cefb;
+    --color-blue-300: #8ab5fa;
+    --color-blue-400: #639cf8;
+    --color-blue-500: #3b82f6;
+    --color-blue-600: #0b60ea;
+    --color-blue-700: #0848b0;
+    --color-blue-800: #053075;
+    --color-blue-900: #03183b;
+    --color-blue-950: #010c1d;
+    --color-orange-50: #fff5f0;
+    --color-orange-100: #ffebe0;
+    --color-orange-200: #ffd7c2;
+    --color-orange-300: #ffc09e;
+    --color-orange-400: #ffa270;
+    --color-orange-500: #ff762c;
+    --color-orange-600: #ff5900;
+    --color-orange-700: #e04f00;
+    --color-orange-800: #b84000;
+    --color-orange-900: #852e00;
+    --color-orange-950: #571e00;
 }
 
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-general), var(--font-circularWeb), var(--font-robert-regular), var(--font-zentry), Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-general), var(--font-circularWeb), var(--font-robert-regular), var(--font-zentry), Arial, Helvetica, sans-serif;
 }
 
 .mask-clip-path {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Note: This default polygon clips nothing. */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Note: This default polygon clips nothing. */
 }
 
 .absolute-center {
-  @apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%];
+    @apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%];
 }
 
 .special-font b {
-  font-family: var( --font-zentry);/* Uses 'zentry' font from config */
-  font-feature-settings: "ss01" on;
+    font-family: var(--font-zentry); /* Uses 'zentry' font from config */
+    font-feature-settings: "ss01" on;
 }
 
 .hero-heading {
-  /* Apply font-zentry in HTML or uncomment below if this class always sets it */
-  font-family: var( --font-zentry);
-  @apply uppercase font-black text-5xl sm:text-7xl md:text-9xl lg:text-[12rem];
+    /* Apply font-zentry in HTML or uncomment below if this class always sets it */
+    font-family: var(--font-zentry);
+    @apply uppercase font-black text-5xl sm:text-7xl md:text-9xl lg:text-[12rem];
 }
 
- .flex-center {
-  @apply flex items-center justify-center;
+.flex-center {
+    @apply flex items-center justify-center;
 }
 
+/* From Uiverse.io by alexruix */
+.loader {
+    position: relative;
+    width: 120px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.loader:before {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #2a9d8f;
+    animation: loading-bounce 0.5s ease-in-out infinite alternate;
+}
+
+.loader:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 7px;
+    width: 45px;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 95px 0 #f2f2f2;
+    animation: loading-step 1s ease-in-out infinite;
+}
+
+@keyframes loading-bounce {
+    0% {
+        transform: scale(1, 0.7);
+    }
+
+    40% {
+        transform: scale(0.8, 1.2);
+    }
+
+    60% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        bottom: 140px;
+    }
+}
+
+@keyframes loading-step {
+    0% {
+        box-shadow: 0 10px 0 rgba(0, 0, 0, 0),
+        0 10px 0 #f2f2f2,
+        -35px 50px 0 #f2f2f2,
+        -70px 90px 0 #f2f2f2;
+    }
+
+    100% {
+        box-shadow: 0 10px 0 #f2f2f2,
+        -35px 50px 0 #f2f2f2,
+        -70px 90px 0 #f2f2f2,
+        -70px 90px 0 rgba(0, 0, 0, 0);
+    }
+}
+
+
+.about-subtext {
+    /* Apply font-circular-web in HTML or uncomment below */
+    /* font-family: theme('fontFamily.circular-web'); */
+    @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center text-lg md:max-w-[34rem];
+}
+
+.about-image {
+    @apply absolute left-1/2 top-0 z-20 h-[60vh] w-96 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[30vw];
+}
+
+.animated-word {
+    /*
+      Consider applying font utilities (font-zentry, font-black) and special-font directly in HTML
+      for better composability with Tailwind. If animated-word always implies these, this is fine.
+    */
+    font-family: var(--font-zentry);
+    font-weight: theme('fontWeight.black'); /* Or 900 */
+    @apply opacity-0;
+    /* If .special-font b styles apply to this element directly: */
+    /* font-feature-settings: "ss01" on; */
+    transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
+    transform-origin: 50% 50% -150px !important; /* Avoid !important if possible by adjusting specificity or refactoring */
+    will-change: opacity, transform;
+}
+
+.animated-title {
+    @apply flex flex-col gap-1 text-7xl uppercase leading-[.8] text-white sm:px-32 md:text-[6rem];
+}
+
+.nav-hover-btn {
+    @apply relative ms-10 text-xs uppercase text-blue-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+    font-family: theme('fontFamily.general'); /* Uses 'general' font from config */
+}
+.indicator-line {
+    @apply h-1 w-px rounded-full bg-white transition-all duration-200 ease-in-out;
+}
+
+.indicator-line.active {
+    animation: indicator-line 0.5s ease infinite;
+    /* --animation-order should be set inline or via JS on the element */
+    animation-delay: calc(var(--animation-order) * 0.1s);
+}
+
+@keyframes indicator-line {
+    0% {
+        height: 4px;
+        transform: translateY(0px);
+    }
+    50% {
+        height: 16px;
+        transform: translateY(-4px);
+    }
+    100% {
+        height: 4px;
+        transform: translateY(0px);
+    }
+}
+
+.floating-nav {
+    @apply bg-black rounded-lg border; /* Consider adding a specific border color or using .border-hsla if always needed */
+}
