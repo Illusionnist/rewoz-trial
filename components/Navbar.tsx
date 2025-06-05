@@ -64,7 +64,7 @@ const Navbar = () => {
             <header className={'absolute top-1/2 w-full -translate-y-1/2'}>
                 <nav className={'flex size-full items-center justify-between px-4'}>
                     <div className={'flex items-center gap-7'}>
-                        <Image src={'/img/logo.png'} alt={'logo'} className={'w-10'} width={40} height={40}/>
+                        <Image src={'/img/logoDR.png'} alt={'logo'} className={'w-10'} width={40} height={40}/>
                         <Button title={'Sign in'} id={'Sign In'} rightIcon={<TiLocationArrow/>} containerClass={'bg-orange-400 md:flex hidden items-center gap-1 justify-center'}/>
                     </div>
                     <div className={'flex items-center h-full'}>
