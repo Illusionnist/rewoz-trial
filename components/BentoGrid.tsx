@@ -13,7 +13,7 @@ const BentoGrid = () => {
                     <p className={'max-w-md font-circularWeb text-lg text-orange-400 opacity-50'}>No Tech Hassles, Just
                         More Sales & Engagement!</p>
                 </div>
-                <div className={'border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]'}>
+                <div className={'relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]'}>
                     <BentoCard src={'/videos/feature-1.mp4'} title={<>radia<b>n</b>t</>}
                                description={'Things do things'}/>
                 </div>
@@ -38,7 +38,7 @@ const BentoGrid = () => {
                         </div>
                     </div>
                     <div className={'bento-tilt_2'}>
-                        <div className="flex size-full flex-col justify-between bg-orange-600">
+                        <div className="flex size-full flex-col justify-between ">
                             <BentoCard src={'/videos/feature-5.mp4'} title={<>nexus</>} description={'Things do things'}/>
                         </div>
                     </div>
