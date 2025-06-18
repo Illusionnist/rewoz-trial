@@ -11,7 +11,6 @@ const Story = () => {
 
 
     const handleMouseMove = (e) => {
-        const {clientX, clientY} = e;
         const element = frameRef.current
 
         if (!element) return;
