@@ -94,12 +94,6 @@ const Hero = () => {
 
     return (
         <div className={'relative h-dvh w-screen overflow-x-hidden'}>
-            {/*{loading &&*/}
-            {/*<div className={'flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50'}>*/}
-            {/*    <div className="loader"></div>*/}
-            {/*</div>*/}
-            {/*}*/}
-
             <div id={'video-frame'} className={'relative z-10 h-dvh  w-screen overflow-hidden rounded-lg bg-blue-500'}>
                 <div>
                     <div
@@ -115,7 +109,7 @@ const Hero = () => {
                     <video ref={nextVideoRef} src={getVideoSrc(currentIndex)} loop={true} muted={true} id={'next-video'}
                            className={'absolute-center invisible absolute z-20 size-60 object-cover object-center'}
                            onLoadedData={handleVideoLoad}></video>
-                    <video src={getVideoSrc(currentIndex === totalVideos - 1 ? 1 : currentIndex)} autoPlay={false}
+                    <video src={getVideoSrc(currentIndex === totalVideos - 1 ? 1 : currentIndex)} autoPlay={true}
                            loop={true} muted={true}
                            className={'absolute left-0 top-0 size-full object-center object-cover'}
                            onLoadedData={handleVideoLoad}/>
@@ -128,8 +122,8 @@ const Hero = () => {
                         <h1 className={'special-font hero-heading text-orange-400'}>
                             M<b>y</b>
                         </h1>
-                        <p className={'mb-5 max-w-64 font-robert-regular text-orange-400'}>Shop to earn rewards</p>
-                        <Button id={'Shop now'} title={'Shop now'} leftIcon={<TiLocationArrow/>}
+                        <p className={'mb-5 max-w-64 font-robert-regular text-orange-400'}>Play to earn rewards</p>
+                        <Button id={'Play now'} title={'Play now'} leftIcon={<TiLocationArrow/>}
                                 containerClass={'bg-yellow-300 flex-center gap-1'}/>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Button from "@/components/Button";
+import AnimatedTitle from "@/components/AnimatedTitle";
 
 const ImageClipBox = ({src, clipClass}) =>(
     <div className={clipClass}>
@@ -23,7 +24,8 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-col items-center text-center">
                     <p className={'font-general text-[10px] uppercase'}>Join Reworz</p>
-                    <p className={'special-font mt-10 w-full font-zentry text-5xl leading-[0.9] md:text-[6rem]'}>Lets b<b>u</b>ild a new era of gaming rewards</p>
+                    <AnimatedTitle title="Lets b<b>u</b>ild a new era of gaming rewards"
+                                   containerClass={'mt-5 text-center text-4xl leading-[0.8] md:text-[6rem] special-font'}/>
 
                     <Button title={'contact us '} containerClass={'mt-10 cursor-pointer bg-orange-400'}/>
                 </div>
