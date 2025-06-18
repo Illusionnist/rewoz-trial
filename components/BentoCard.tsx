@@ -11,7 +11,7 @@ interface BentoCardProps {
 const BentoTilt = ({children, className = ''}: { children: ReactNode, className?: string }) => {
 
     const [transformStyle, setTransformStyle] = useState('')
-    const itemRef = useRef(null);
+    const itemRef = useRef<HTMLInputElement>(null);
 
     const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
         if(!itemRef.current) return;

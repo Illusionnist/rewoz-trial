@@ -4,7 +4,7 @@ import React from 'react'
 import Button from "@/components/Button";
 import AnimatedTitle from "@/components/AnimatedTitle";
 
-const ImageClipBox = ({src, clipClass}) =>(
+const ImageClipBox = ({src, clipClass}: {src: string, clipClass: string}) =>(
     <div className={clipClass}>
         <img src={src} alt=""/>
     </div>
