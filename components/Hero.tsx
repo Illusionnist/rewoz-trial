@@ -14,7 +14,7 @@ const Hero = () => {
     const [hasClicked, setHasClicked] = useState(false)
     const [loading, setLoading] = useState(true)
     const [loadedVideos, setLoadedVideos] = useState(0)
-    const totalVideos = 2;
+    const totalVideos = 4;
     const nextVideoRef = useRef<HTMLVideoElement>(null)
 
     const handleMiniVideoClick = () => {
@@ -90,7 +90,7 @@ const Hero = () => {
     })
 
 
-    const getVideoSrc = (index: number) => `videos/coffee-cup-${index}.mp4`
+    const getVideoSrc = (index: number) => `videos/hero-${index}.mp4`
 
     return (
         <div className={'relative h-dvh w-screen overflow-x-hidden'}>
