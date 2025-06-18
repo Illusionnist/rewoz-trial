@@ -14,7 +14,7 @@ const BentoTilt = ({children, className = ''}: { children: ReactNode, className?
     const itemRef = useRef(null);
 
     const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-        if(!itemRef.current) return;
+        if(!itemRef.current)return;
 
         const { left, top, width, height } = itemRef.current.getBoundingClientRect();
 
