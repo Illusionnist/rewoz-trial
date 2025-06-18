@@ -2,9 +2,7 @@
 
 import React, {useRef} from 'react'
 import AnimatedTitle from "@/components/AnimatedTitle";
-import Image from "next/image";
 import {gsap} from "gsap";
-import RoundedCorner from "@/components/RoundedCorner";
 import Button from "@/components/Button";
 
 const Story = () => {
